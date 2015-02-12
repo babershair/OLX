@@ -1,0 +1,62 @@
+﻿@model OLX_.Models.Ad
+@{
+    ViewBag.Title = "UpdateAd";
+    Layout = "~/Views/Shared/AfterLoginLayout.cshtml";
+}
+
+<h2>UpdateAd</h2>
+<div class="container">
+ 
+<div class="col-md-8">
+@using (Html.BeginForm()) {
+    
+ @Html.HiddenFor(model => model.Id)
+    @Html.HiddenFor(model => model.Image)
+    @Html.HiddenFor(model => model.Category)
+    @Html.HiddenFor(model => model.Uid)
+    @Html.ValidationSummary(true)
+
+<div class="editor-label">
+            @Html.LabelFor(model => model.Title)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Title, new {style="color:orange"})
+            @Html.ValidationMessageFor(model => model.Title)
+           
+        </div>
+<div class="editor-label">
+            @Html.LabelFor(model => model.Description)
+
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(model => model.Description, new {style="color:orange"})
+             @Html.ValidationMessageFor(model => model.Description)
+           
+        </div>
+
+<div class="editor-label">
+            @Html.LabelFor(model => model.Price)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Price,new {style="color:orange"})
+             @Html.ValidationMessageFor(model => model.Price)
+
+           
+        </div>
+      <p>
+            <input type="submit" value="Update"  style="width:100px;background-color:#F78E21; color:#FFF;"/>
+        </p>
+    
+}
+<div>
+   <form action="/Home/Back" method="post">
+       <input type="submit" value="Back" style="width:100px;background-color:#F78E21;color:#FFF;"/>
+
+   </form>
+</div>
+    </div>
+    </div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

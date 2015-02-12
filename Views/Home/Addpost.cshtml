@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Addpost";
+    Layout = "~/Views/Shared/AfterLoginLayout.cshtml";
+}
+
+<h2>Addpost</h2>
+
+<div class="container">
+ <div class="row">
+<div class="col-md-8">
+    <form id="f1" action="/Home/SaveAd" method="post"  enctype="multipart/form-data">
+        
+        <div class="row">
+        <div class="name col-md-4">
+             
+            <select name="Category" id="Cat"  style="color:orange;width:100px;height:28px;" class ="text-box single-line" @*data-val="true" data-val-required="Select a Category*@" >
+             <option value="">Select a Category</option> 
+                <option value="Electronics">Electronics</option> 
+             <option value="Mobiles">Mobiles</option> 
+                <option value="Computers">Computers</option> 
+             @*<option value="Animals">Animals</option>*@ 
+                <option value="Laptops">Laptops</option> 
+             <option value="Cars">Cars</option> 
+                @*<option value="Houses">Houses</option>*@ 
+             <option value="Other">Other</option> 
+             
+            </select>
+                  
+             @*@Html.ValidationMessage("Category")*@
+        </div>
+        <div class="name col-md-4">
+          <input id="t1" type="text" name="Title"  class="text-box single-line" @*data-val="true" data-val-required="This must be a Title"*@ placeholder="Title" style="color:black" />
+                        
+            @*@Html.ValidationMessage("Title")*@
+        </div>
+          
+              <div class="text col-md-12">
+               <textarea id="d" class="text-box single-line"@* data-val="true" data-val-required="This must be a Description"*@ name="Description" placeholder="Description" style="color:black;height:100px; width:300px" ></textarea>
+                 
+                @*@Html.ValidationMessage("Description")*@
+        </div>
+        <div class="row">
+              <div class="text col-md-4">
+          
+            <input id="pri" type="text" name="Price" id="Price"@* data-val="true" data-val-required="This must be a Price"*@ placeholder="price" style="color:black"/>
+                  @*@Html.ValidationMessage("Price")*@
+        </div>
+        </div>
+            <div class="row">
+              <div class="text col-md-4">
+            <input id="im" type="file" name="Image"  class="text-box single-line" />
+            @*@Html.ValidationMessage("Image")*@  
+        </div>
+        
+          </div>                           
+        <div class="send">
+             <input id="bu" type ="submit" value ="Post Ad" class="btn btn-info" style =" font-size: medium; height:60px;width:250px" /> 
+        </div>
+    </div>
+        @Html.ValidationSummary();
+            </form>
+    </div>
+     </div>
+    
+</div>
+
+        
+    
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

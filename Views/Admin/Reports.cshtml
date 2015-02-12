@@ -1,0 +1,132 @@
+﻿@{
+    ViewBag.Title = "Reports";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+                        <div id="page-wrapper">
+                <!--BEGIN TITLE & BREADCRUMB PAGE-->
+                <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
+                    <div class="page-header pull-left">
+                        <div class="page-title">
+                            Charts</div>
+                    </div>
+                    <ol class="breadcrumb page-breadcrumb pull-right">
+                        <li><i class="fa fa-home"></i>&nbsp;<a href="dashboard.html">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                        <li class="hidden"><a href="#">Charts</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                        <li class="active">Charts</li>
+                    </ol>
+                    <div class="clearfix">
+                    </div>
+                </div>
+                <!--END TITLE & BREADCRUMB PAGE-->
+                <!--BEGIN CONTENT-->
+                <div class="page-content">
+                    <div id="tab-general">
+                        <div class="row mbl">
+                            <div class="col-lg-12">
+                                
+                                            <div class="col-md-12">
+                                                <div id="area-chart-spline" style="width: 100%; height: 300px; display: none; padding: 0px; position: relative;">
+                                                <canvas class="flot-base" width="756" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 756px; height: 300px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 299px; left: 10px;">Jan</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 299px; left: 133px;">Feb</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 299px; left: 255px;">Mar</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 299px; left: 378px;">Apr</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 299px; left: 501px;">May</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 299px; left: 623px;">Jun</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 299px; left: 746px;">Jul</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 290px; left: 1px;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 250px; left: 1px;">25</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 210px; left: 1px;">50</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 170px; left: 1px;">75</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 130px; left: 1px;">100</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 90px; left: 1px;">125</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 50px; left: 1px;">150</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 10px; left: 1px;">175</div></div></div><canvas class="flot-overlay" width="756" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 756px; height: 300px;"></canvas><div class="legend"><div style="position: absolute; width: 0px; height: 0px; top: 15px; right: 15px; opacity: 0.85; background-color: rgb(255, 255, 255);"> </div><table style="position:absolute;top:15px;right:15px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #ffce54;overflow:hidden"></div></div></td><td class="legendLabel">Upload</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #01b6ad;overflow:hidden"></div></div></td><td class="legendLabel">Download</td></tr></tbody></table></div></div>
+                                            </div>
+                                
+                            </div>
+
+                            <div class="col-lg-12">
+                              
+                                    
+                              <div class="row">
+                    <div class="col-lg-6">
+                        <div class="portlet box">
+                            <div class="portlet-header">
+                                <div class="caption">Line Chart</div>
+                                <div class="tools"><i class="fa fa-chevron-up"></i><i data-toggle="modal" data-target="#modal-config" class="fa fa-cog"></i><i class="fa fa-refresh"></i><i class="fa fa-times"></i></div>
+                            </div>
+                            <div class="portlet-body">
+                                <div id="line-chart" style="width: 100%; height: 300px; padding: 0px; position: relative;"><canvas class="flot-base" width="716" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 716px; height: 300px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 17px;">Jan</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 101px;">Feb</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 185px;">Mar</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 271px;">Apr</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 355px;">May</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 442px;">Jun</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 529px;">Jul</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 611px;">Aug</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 696px;">Sep</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 272px; left: 14px;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 218px; left: 8px;">50</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 164px; left: 1px;">100</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 110px; left: 1px;">150</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 56px; left: 1px;">200</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 3px; left: 1px;">250</div></div></div><canvas class="flot-overlay" width="716" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 716px; height: 300px;"></canvas><div class="legend"><div style="position: absolute; width: 60px; height: 60px; top: 15px; right: 16px; opacity: 0.85; background-color: rgb(255, 255, 255);"> </div><table style="position:absolute;top:15px;right:16px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #ffce54;overflow:hidden"></div></div></td><td class="legendLabel">Chrome</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #3DB9D3;overflow:hidden"></div></div></td><td class="legendLabel">Firefox</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #df4782;overflow:hidden"></div></div></td><td class="legendLabel">Safari</td></tr></tbody></table></div></div>
+                            </div>
+                        </div>
+                        <div class="portlet box">
+                            <div class="portlet-header">
+                                <div class="caption">Bar Chart</div>
+                                <div class="tools"><i class="fa fa-chevron-up"></i><i data-toggle="modal" data-target="#modal-config" class="fa fa-cog"></i><i class="fa fa-refresh"></i><i class="fa fa-times"></i></div>
+                            </div>
+                            <div class="portlet-body">
+                                <div id="bar-chart" style="width: 100%; height: 300px; padding: 0px; position: relative;"><canvas class="flot-base" width="716" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 716px; height: 300px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 35px;">Jan</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 92px;">Feb</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 150px;">Mar</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 209px;">Apr</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 267px;">May</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 328px;">Jun</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 388px;">Jul</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 443px;">Aug</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 502px;">Sep</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 562px;">Oct</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 619px;">Nov</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 678px;">Dec</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 272px; left: 14px;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 226px; left: 8px;">20</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 181px; left: 8px;">40</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 136px; left: 8px;">60</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 91px; left: 8px;">80</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 46px; left: 1px;">100</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 1px; left: 1px;">120</div></div></div><canvas class="flot-overlay" width="716" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 716px; height: 300px;"></canvas><div class="legend"><div style="position: absolute; width: 63px; height: 20px; top: 13px; right: 16px; opacity: 0.85; background-color: rgb(255, 255, 255);"> </div><table style="position:absolute;top:13px;right:16px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #01b6ad;overflow:hidden"></div></div></td><td class="legendLabel">Revenue</td></tr></tbody></table></div></div>
+                            </div>
+                        </div>
+
+                       <!-- <div class="portlet box">
+                            <div class="portlet-header">
+                                <div class="caption">Area Chart</div>
+                                <div class="tools"><i class="fa fa-chevron-up"></i><i data-toggle="modal" data-target="#modal-config" class="fa fa-cog"></i><i class="fa fa-refresh"></i><i class="fa fa-times"></i></div>
+                            </div>
+                            <div class="portlet-body">
+                                <div id="area-chart" style="width: 100%; height:300px"></div>
+                            </div>
+                        </div>
+                       --> <!--<div class="portlet box">
+                            <div class="portlet-header">
+                                <div class="caption">Pie Chart</div>
+                                <div class="tools"><i class="fa fa-chevron-up"></i><i data-toggle="modal" data-target="#modal-config" class="fa fa-cog"></i><i class="fa fa-refresh"></i><i class="fa fa-times"></i></div>
+                            </div>
+                            <div class="portlet-body">
+                                <div id="pie-chart" style="width: 100%; height:300px"></div>
+                            </div>
+                        </div>-->
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="portlet box">
+                            <div class="portlet-header">
+                                <div class="caption">Line Chart - Spline</div>
+                                <div class="tools"><i class="fa fa-chevron-up"></i><i data-toggle="modal" data-target="#modal-config" class="fa fa-cog"></i><i class="fa fa-refresh"></i><i class="fa fa-times"></i></div>
+                            </div>
+                            <div class="portlet-body">
+                                <div id="line-chart-spline" style="width: 100%; height: 300px; padding: 0px; position: relative;"><canvas class="flot-base" width="716" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 716px; height: 300px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 17px;">Jan</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 101px;">Feb</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 185px;">Mar</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 271px;">Apr</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 355px;">May</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 442px;">Jun</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 529px;">Jul</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 611px;">Aug</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 696px;">Sep</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 272px; left: 8px;">75</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 227px; left: 1px;">100</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 182px; left: 1px;">125</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 137px; left: 1px;">150</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 92px; left: 1px;">175</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 47px; left: 1px;">200</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 3px; left: 1px;">225</div></div></div><canvas class="flot-overlay" width="716" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 716px; height: 300px;"></canvas><div class="legend"><div style="position: absolute; width: 60px; height: 60px; top: 15px; right: 16px; opacity: 0.85; background-color: rgb(255, 255, 255);"> </div><table style="position:absolute;top:15px;right:16px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #ffce54;overflow:hidden"></div></div></td><td class="legendLabel">Chrome</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #3DB9D3;overflow:hidden"></div></div></td><td class="legendLabel">Firefox</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #df4782;overflow:hidden"></div></div></td><td class="legendLabel">Safari</td></tr></tbody></table></div></div>
+                            </div>
+                        </div>
+                        <div class="portlet box">
+                            <div class="portlet-header">
+                                <div class="caption">Bar Chart - Stack</div>
+                                <div class="tools"><i class="fa fa-chevron-up"></i><i data-toggle="modal" data-target="#modal-config" class="fa fa-cog"></i><i class="fa fa-refresh"></i><i class="fa fa-times"></i></div>
+                            </div>
+                            <div class="portlet-body"><h4 class="block-heading">Bar Chart - Stack</h4>
+
+                                <div id="bar-chart-stack" style="width: 100%; height: 300px; padding: 0px; position: relative;"><canvas class="flot-base" width="716" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 716px; height: 300px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 35px;">Jan</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 92px;">Feb</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 150px;">Mar</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 209px;">Apr</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 267px;">May</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 328px;">Jun</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 388px;">Jul</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 443px;">Aug</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 502px;">Sep</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 562px;">Oct</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 619px;">Nov</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 284px; left: 678px;">Dec</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 272px; left: 14px;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 204px; left: 8px;">50</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 136px; left: 1px;">100</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 68px; left: 1px;">150</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 1px; left: 1px;">200</div></div></div><canvas class="flot-overlay" width="716" height="300" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 716px; height: 300px;"></canvas><div class="legend"><div style="position: absolute; width: 104px; height: 40px; top: 13px; right: 16px; opacity: 0.85; background-color: rgb(255, 255, 255);"> </div><table style="position:absolute;top:13px;right:16px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #3DB9D3;overflow:hidden"></div></div></td><td class="legendLabel">New Visitor</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid #ffce54;overflow:hidden"></div></div></td><td class="legendLabel">Returning Visitor</td></tr></tbody></table></div></div>
+                            </div>
+                        </div>
+                        <!--<div class="portlet box">
+                            <div class="portlet-header">
+                                <div class="caption">Area Chart - Spline</div>
+                                <div class="tools"><i class="fa fa-chevron-up"></i><i data-toggle="modal" data-target="#modal-config" class="fa fa-cog"></i><i class="fa fa-refresh"></i><i class="fa fa-times"></i></div>
+                            </div>
+                            <div class="portlet-body">
+                                <div id="Div1" style="width: 100%; height:300px"></div>
+                            </div>
+                        </div>
+                        <div class="portlet box">
+                            <div class="portlet-header">
+                                <div class="caption">Percentiles Chart</div>
+                                <div class="tools"><i class="fa fa-chevron-up"></i><i data-toggle="modal" data-target="#modal-config" class="fa fa-cog"></i><i class="fa fa-refresh"></i><i class="fa fa-times"></i></div>
+                            </div>
+                            <div class="portlet-body">
+                                <div id="percentiles-chart" style="width: 100%; height:300px"></div>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+                 
+                 
+
+
+                              
+                                </div>
+                                
+                            
+                     
+                            
+                        </div>
+                    </div>
+                </div>
+                <!--END CONTENT-->

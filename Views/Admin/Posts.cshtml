@@ -1,0 +1,143 @@
+﻿@model List<OLX_.Models.Ad>
+@{
+    ViewBag.Title = "Posts";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+          
+          
+            <div id="page-wrapper">
+                <!--BEGIN TITLE & BREADCRUMB PAGE-->
+                <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
+                    <div class="page-header pull-left">
+                        <div class="page-title">
+                            Data Grid</div>
+                    </div>
+                    <ol class="breadcrumb page-breadcrumb pull-right">
+                        <li><i class="fa fa-home"></i>&nbsp;<a href="dashboard.html">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                        <li class="hidden"><a href="#">Data Grid</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+                        <li class="active">Data Grid</li>
+                    </ol>
+                    <div class="clearfix">
+                    </div>
+                </div>
+                <!--END TITLE & BREADCRUMB PAGE-->
+                <!--BEGIN CONTENT-->
+                <div class="page-content">
+                    <div id="tab-general">
+                        <div class="row mbl">
+                            <div class="col-lg-12">
+                                
+                                            <div class="col-md-12">
+                                                <div id="area-chart-spline" style="width: 100%; height: 300px; display: none;">
+                                                </div>
+                                            </div>
+                                
+                            </div>
+
+                            <div class="col-lg-12">
+                            
+                            <div class="page-content">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel">
+                            <div class="panel-body">
+                                <div id="grid-layout-table-1" class="box jplist">
+                                    @*<div class="jplist-ios-button"><i class="fa fa-sort"></i>jPList Actions</div>
+                                    <div class="jplist-panel box panel-top">
+                                        <button type="button" data-control-type="reset" data-control-name="reset" data-control-action="reset" class="jplist-reset-btn btn btn-default">Reset<i class="fa fa-share mls"></i></button>
+                                        <div data-control-type="drop-down" data-control-name="paging" data-control-action="paging" class="jplist-drop-down form-control">
+                                            <ul class="dropdown-menu">
+                                                <li><span data-number="3"> 3 per page</span></li>
+                                                <li><span data-number="5"> 5 per page</span></li>
+                                                <li><span data-number="10" data-default="true"> 10 per page</span></li>
+                                                <li><span data-number="all"> view all</span></li>
+                                            </ul>
+                                        </div>
+                                        <div data-control-type="drop-down" data-control-name="sort" data-control-action="sort" data-datetime-format="{month}/{day}/{year}" class="jplist-drop-down form-control">
+                                            <ul class="dropdown-menu">
+                                                <li><span data-path="default">Sort by</span></li>
+                                                <li><span data-path=".title" data-order="asc" data-type="text">Title A-Z</span></li>
+                                                <li><span data-path=".title" data-order="desc" data-type="text">Title Z-A</span></li>
+                                                <li><span data-path=".desc" data-order="asc" data-type="text">Description A-Z</span></li>
+                                                <li><span data-path=".desc" data-order="desc" data-type="text">Description Z-A</span></li>
+                                                <li><span data-path=".like" data-order="asc" data-type="number" data-default="true">Likes asc</span></li>
+                                                <li><span data-path=".like" data-order="desc" data-type="number">Likes desc</span></li>
+                                                <li><span data-path=".date" data-order="asc" data-type="datetime">Date asc</span></li>
+                                                <li><span data-path=".date" data-order="desc" data-type="datetime">Date desc</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="text-filter-box">
+                                            <div class="input-group"><span class="input-group-addon"><i class="fa fa-search"></i></span><input data-path=".title" type="text" value="" placeholder="Filter by Title" data-control-type="textbox" data-control-name="title-filter" data-control-action="filter" class="form-control"/></div>
+                                        </div>
+                                        <div class="text-filter-box">
+                                            <div class="input-group"><span class="input-group-addon"><i class="fa fa-search"></i></span><input data-path=".desc" type="text" value="" placeholder="Filter by Description" data-control-type="textbox" data-control-name="desc-filter" data-control-action="filter" class="form-control"/></div>
+                                        </div>
+                                        <div data-type="Page {current} of {pages}" data-control-type="pagination-info" data-control-name="paging" data-control-action="paging" class="jplist-label btn btn-default"></div>
+                                        <div data-control-type="pagination" data-control-name="paging" data-control-action="paging" class="jplist-pagination"></div>
+                                    </div>*@
+                                    <div class="box text-shadow">
+                                        <table class="demo-tbl" style="padding:0 15px 5px 0; border-spacing:2px; border-color:gray "><!--<item>1</item>-->
+                                            @foreach (var item in Model)
+                                            {
+                                                <tr class="tbl-item" ><!--<img/>-->
+                                                <td class="img"style="padding:0 40px 40px 0; border-spacing:2px; border-color:gray;" >
+                                                    <img src="@item.Image" style="width:200px;"/></td>
+                                                <!--<data></data>-->
+                                                <td class="td-block" style="border-color:black">Category: <p class="date" style="move-to:right">@item.Category</p>
+
+                                                    Title: <p class="title">@item.Title</p>
+
+                                                    Description: <p class="desc">@item.Description</p>
+
+                                                    Price: <p class="like">@item.Price</p>
+                                                    <form action="/Admin/DeletePost/@item.Id" method="post">
+                                                    <input type="submit" value="delete"/>
+                                                    </form>
+                                                </td>
+                                                    
+                                            </tr>
+                                            }
+                                            
+                                        </table>
+                                    </div>
+                                    <div class="box jplist-no-results text-shadow align-center"><p>No results found</p></div>
+                                    <div class="jplist-ios-button"><i class="fa fa-sort"></i>jPList Actions</div>
+                                    <div class="jplist-panel box panel-bottom">
+                                        <div data-control-type="drop-down" data-control-name="paging" data-control-action="paging" data-control-animate-to-top="true" class="jplist-drop-down form-control">
+                                            <ul class="dropdown-menu">
+                                                <li><span data-number="3"> 3 per page</span></li>
+                                                <li><span data-number="5"> 5 per page</span></li>
+                                                <li><span data-number="10" data-default="true"> 10 per page</span></li>
+                                                <li><span data-number="all"> view all</span></li>
+                                            </ul>
+                                        </div>
+                                        <div data-control-type="drop-down" data-control-name="sort" data-control-action="sort" data-control-animate-to-top="true" data-datetime-format="{month}/{day}/{year}" class="jplist-drop-down form-control">
+                                            <ul class="dropdown-menu">
+                                                <li><span data-path="default">Sort by</span></li>
+                                                <li><span data-path=".title" data-order="asc" data-type="text">Title A-Z</span></li>
+                                                <li><span data-path=".title" data-order="desc" data-type="text">Title Z-A</span></li>
+                                                <li><span data-path=".desc" data-order="asc" data-type="text">Description A-Z</span></li>
+                                                <li><span data-path=".desc" data-order="desc" data-type="text">Description Z-A</span></li>
+                                                <li><span data-path=".like" data-order="asc" data-type="number" data-default="true">Likes asc</span></li>
+                                                <li><span data-path=".like" data-order="desc" data-type="number">Likes desc</span></li>
+                                                <li><span data-path=".date" data-order="asc" data-type="datetime">Date asc</span></li>
+                                                <li><span data-path=".date" data-order="desc" data-type="datetime">Date desc</span></li>
+                                            </ul>
+                                        </div>
+                                        <div data-type="{start} - {end} of {all}" data-control-type="pagination-info" data-control-name="paging" data-control-action="paging" class="jplist-label btn btn-default"></div>
+                                        <div data-control-type="pagination" data-control-name="paging" data-control-action="paging" data-control-animate-to-top="true" class="jplist-pagination"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                            
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!--END CONTENT-->
+           

@@ -1,0 +1,71 @@
+﻿@model OLX_.Models.User
+@{
+    ViewBag.Title = "SignUp";
+}
+
+<h2>SignUp</h2>
+
+ @Scripts.Render("~/bundles/jquery")
+    <script>
+
+        $(document).ready(function () {
+
+            
+
+            $('#b1').click(function () {
+
+                var userName = $('#UserName').val();
+
+                //alert('User Name ='+ userName);
+              
+                $.getJSON("/home/CheckUserName?UserName=" + userName, function (data) {
+                   
+                    if (data) {
+                        $('#result').text("User already exists in database");
+
+                    }
+                    else {
+                        $('#result').text("User Name is available");
+                    }
+                });
+
+            });
+
+        });
+    </script>
+<div class="container">
+ <div class="row">
+<div class="col-md-8">
+    <form action="/SignUp/SaveSignUp" method="post" class="send-message">
+        
+        <div class="row">
+        <div class="name col-md-4">
+            <input type="text" name="Name" id="Name" placeholder="Name" required="required" style="color:orange"/>
+        </div>
+        <div class="name col-md-4">
+            <input type="text" name="UserName" id="UserName" placeholder="User Name" required="required" style="color:orange"/><div id="result"></div><input type="button" id="b1" value="Check" />
+            
+        </div>
+        </div>
+          
+              <div class="email col-md-4">
+            <input type="text" name="Email" id="Email" placeholder="Email" required="required" style="color:orange" />
+        </div>
+        <div class="row">
+              <div class="password col-md-4">
+            <input type="password" name="Passward" id="Passward" placeholder="Passward" required="required" style="color:black"/>
+        </div>
+         <div class="password col-md-4">
+            <input type="text" name="PhoneNumber" id="PhoneNumber" placeholder="PhoneNumber" required="required" style="color:black"/>
+        </div>
+          </div>                           
+        <div class="send">
+             <input type ="submit" value ="SignUp" class="btn btn-info" style =" font-size: medium; height:60px;width:250px" /> 
+        </div>
+        
+@Html.ValidationSummary();
+    </form>
+    </div>
+     </div>
+
+</div>
