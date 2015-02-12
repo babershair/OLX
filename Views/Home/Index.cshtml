@@ -1,0 +1,560 @@
+@model List<OLX_.Models.Ad>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<!-- templatemo 417 grill -->
+<!-- 
+Grill Template 
+http://www.templatemo.com/preview/templatemo_417_grill 
+-->
+    <head>
+        <meta charset="utf-8">
+        <title>Recycler</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+       <!-- ////////////////////////////// -->
+        <link rel="shortcut icon" href="http://vandelaydesign.com/favicon.ico">
+  <link rel="icon" href="http://vandelaydesign.com/favicon.ico">
+
+  <!--<link rel="stylesheet" type="text/css" media="all" href="modal/bootstrap.css">-->
+  
+  <!--<link rel="stylesheet" type="text/css" media="all" href="modal/templatemo_style.css">-->
+  <link rel="stylesheet" type="text/css" media="all" href="Content/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" media="all" href="Content/font-awesome.min.css" />
+  
+  <link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+        <!-- ///////////////////// -->
+
+        <link rel="stylesheet" href="Content/bootstrap1.css">
+       <link rel="stylesheet" type="text/css" media="all" href="Content/default.css">
+                   <link rel="stylesheet" href="Content/font-awesome.css">
+        <link rel="stylesheet" href="Content/templatemo_style.css">
+        <link rel="stylesheet" href="Content/templatemo_misc.css">
+        <link rel="stylesheet" href="Content/flexslider.css">
+        <link rel="stylesheet" href="Content/testimonails-slider.css">
+
+        <script src="Scripts/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="Scripts/bootstrap.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="Scripts/modals.js"></script>
+    </head>
+    <body>
+        
+            
+        
+        
+            <div id="slider">
+                <div class="flexslider">
+                  <ul class="slides">
+                    <li>
+                        <div class="slider-caption">
+                            <h1>Delicious Meals</h1>
+                            <p>Donec justo dui, semper vitae aliquam euzali, ornare pretium enim. Maecenas molestie diam
+                            <br><br>eget tellus luctus fermentum.</p>
+                            <a href="single-post.html">Shop Now</a>
+                        </div>
+                      <img src="~/images/house2.jpg" alt="" />
+                    </li>
+                    <li>
+                        <div class="slider-caption">
+                            <h1>Ice-cream Menus</h1>
+                            <p>Nulla id iaculis ligula. Vivamus mattis quam eget urna tincidunt consequat. Nullam 
+                            <br><br>consectetur tempor neque vitae iaculis. Aliquam erat volutpat.</p>
+                            <a href="single-post.html">More Details</a>
+                        </div>
+                      <img src="~/images/index.jpg" alt="" />
+                    </li>
+                    <li>
+                        <div class="slider-caption">
+                            <h1>Healthy Drinks</h1>
+                            <p>Maecenas fermentum est ut elementum vulputate. Ut vel consequat urna. Ut aliquet 
+                            <br><br>ornare massa, quis dapibus quam condimentum id.</p>
+                            <a href="single-post.html">Get Ready</a>
+                        </div>
+                      <img src="images/slide3.jpg" alt="" />
+                    </li>
+                  </ul>
+                </div>
+            </div>
+
+    
+        <div id="products-post">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="product-heading">
+                                <h2>ADs</h2>
+                                <img src="~/images/under-heading.png" alt="" >
+                            </div>
+                        </div>
+                    </div>
+                    @* /////////////////////////////////// *@
+                    <div class="row">
+                        <div class="filters col-md-12 col-xs-12">
+                            <ul id="filters" class="clearfix">
+                                <li><span class="filter" data-filter="all">All</span></li>
+                                <li><span class="filter" data-filter=".electronics">Electronics</span></li>
+                                <li><span class="filter" data-filter=".mobiles">Mobile</span></li>
+                                <li><span class="filter" data-filter=".computers">Computer</span></li>
+                                <li><span class="filter" data-filter=".laptops">Laptop</span></li>
+                                <li><span class="filter" data-filter=".cars">Car</span></li>
+                                <li><span class="filter" data-filter=".other">Other</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row" id="Container">
+                        
+                    @foreach (var i in Model)
+                    {
+                        
+                        if (@i.Category=="Electronics")
+                        {                                
+                                    <div class="col-md-3 col-sm-6 mix portfolio-item electronics">       
+                                        <div class="portfolio-wrapper">                
+                                            <div class="portfolio-thumb">
+                                                <img src="@i.Image" alt="" />
+                                                <div class="hover">
+                                                    <div class="hover-iner">
+                                                        <a class="fancybox" href="@i.Image"><img src="@i.Image" alt="" /></a>
+                                                        <span>@i.Category</span>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                            <div class="label-text">
+                                                <h3><a href="single-post.html">@i.Title</a></h3>
+                                                <span class="text-category">@i.Price</span>
+                                               
+                                            </div>
+                                        </div>          
+                                    </div>
+                                    @*///////////////////////////*@
+
+                                  
+                        } 
+                        else if (@i.Category=="Mobiles")
+                        {
+                                    <div class="col-md-3 col-sm-6 mix portfolio-item mobiles"> 
+                                              
+                                        <div class="portfolio-wrapper">                
+                                            <div class="portfolio-thumb">
+                                                <img src="@i.Image" alt="" />
+                                                <div class="hover">
+                                                    <div class="hover-iner">
+                                                        <a class="fancybox" href="@i.Image"><img src="@i.Image" alt="" /></a>
+                                                        <span>@i.Category</span>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                            <div class="label-text">
+                                                <h3><a href="single-post.html">@i.Title</a></h3>
+                                                <span class="text-category">@i.Price</span>
+                                            </div>
+                                        </div>          
+                                    </div>
+                                    @*///////////////////////////*@
+
+                                 
+                        }
+                        else if (@i.Category=="Computers")
+                        {
+                                    <div class="col-md-3 col-sm-6 mix portfolio-item computers">       
+                                        <div class="portfolio-wrapper">                
+                                            <div class="portfolio-thumb">
+                                                <img src="@i.Image" alt="" />
+                                                <div class="hover">
+                                                    <div class="hover-iner">
+                                                        <a class="fancybox" href="@i.Image"><img src="@i.Image" alt="" /></a>
+                                                        <span>@i.Category</span>
+
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                            <div class="label-text">
+                                                <h3><a href="single-post.html">@i.Title</a></h3>
+                                                <span class="text-category">@i.Price</span>
+                                               
+                                            </div>
+                                        </div>          
+                                    </div>
+                                    @*///////////////////////////*@
+
+                                 
+                        } 
+                        else if (@i.Category=="Laptops")
+                        {
+                                    <div class="col-md-3 col-sm-6 mix portfolio-item laptops">       
+                                        <div class="portfolio-wrapper">                
+                                            <div class="portfolio-thumb">
+                                                <img src="@i.Image" alt="" />
+                                                <div class="hover">
+                                                    <div class="hover-iner">
+                                                        <a class="fancybox" href="@i.Image"><img src="@i.Image" alt="" /></a>
+                                                        <span>@i.Category</span>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                            <div class="label-text">
+                                                <h3><a href="single-post.html">@i.Title</a></h3>
+                                                <span class="text-category">@i.Price</span>
+                                               
+                                            </div>
+                                        </div>          
+                                    </div>
+                                    @*///////////////////////////*@
+
+                                 
+                        }
+                        else if (@i.Category=="Cars")
+                        {
+                                    <div class="col-md-3 col-sm-6 mix portfolio-item cars">       
+                                        <div class="portfolio-wrapper">                
+                                            <div class="portfolio-thumb">
+                                                <img src="@i.Image" alt="" />
+                                                <div class="hover">
+                                                    <div class="hover-iner">
+                                                        <a class="fancybox" href="@i.Image"><img src="@i.Image" alt="" /></a>
+                                                        <span>@i.Category</span>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                            <div class="label-text">
+                                                <h3><a href="single-post.html">@i.Title</a></h3>
+                                                <span class="text-category">@i.Price</span>
+                                                
+                                            </div>
+                                        </div>          
+                                    </div>
+                                    @*///////////////////////////*@
+
+                                 
+                        }
+                        else if (@i.Category=="Other")
+                        {
+                                    <div class="col-md-3 col-sm-6 mix portfolio-item other">       
+                                        <div class="portfolio-wrapper">                
+                                            <div class="portfolio-thumb">
+                                                <img src="@i.Image" alt="" />
+                                                <div class="hover">
+                                                    <div class="hover-iner">
+                                                        <a class="fancybox" href="@i.Image"><img src="@i.Image" alt="" /></a>
+                                                        <span>@i.Category</span>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                            <div class="label-text">
+                                                <h3><a href="single-post.html">@i.Title</a></h3>
+                                                <span class="text-category">@i.Price</span>
+                                               
+                                            </div>
+                                        </div>          
+                                    </div>
+                                    @*///////////////////////////*@
+
+                                 
+                        }
+                    }
+                   
+                    
+                    
+                    </div> 
+                </div>
+            </div>
+        
+
+           @* <div id="services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="heading-section">
+                                <!--<h2>Free Website Templates</h2>-->
+                                <img src="~/images/under-heading.png" alt="" >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <div class="icon">
+                                   <a href="#post" > <i class="fa fa-briefcase" data-toggle="modal" data-target=".bs-example-modal-post"></i></a>
+                                </div>
+                                <h4>Add a post</h4>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <div class="icon">
+                                    <a href="#C_A" ><i   class="fa  fa-user" data-toggle="modal" data-target=".bs-example-modal-lg"></i></a>
+                                 </div>
+                                 <h4>My Account</h4>
+                             </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <div class="icon">
+                                    <i class="fa fa-edit"></i>
+                                </div>
+                                <h4>Edit Post</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <div class="icon">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                                <h4>Search</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               </div>        
+                              
+        *@
+
+           @* <div id="latest-blog">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="heading-section">
+                                <h2>Catagories</h2>
+                                <img src="images/under-heading.png" alt="" >
+                            </div>
+                        </div>
+                    </div>*@
+
+
+
+
+<!-- ////////////////////////////////////////////////////////////////////// -->
+             @*   <div class="row">
+                        
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <div class="icon">
+                                    <ic class="fa fa-mobile-phone"></ic>
+                                </div>
+                                <h4>Mobiles</h4>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <div class="icon">
+                                    <a href="#C_A" ><ic   class="fa  fa-home" data-toggle="modal" data-target=".bs-example-modal-lg"></ic></a>
+                                 </div>
+                                 <h4>Real Estate</h4>
+                             </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <div class="icon">
+                                    <ic class="fa fa-laptop"></ic>
+                                </div>
+                                <h4>Electronics & Computers</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <div class="icon">
+                                    <ic class="fa fa-wheelchair"></ic>
+                                </div>
+                                <h4>home appliences</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- /////////////////////////////////////// -->
+
+                     
+
+                    <!-- ////////////////////////////////////////////////////////////////////// -->
+                <div class="row" style="margin-top:30px; margin-bottom:50px">
+                        
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <div class="icon">
+                                    <ic class="fa fa-truck"></ic>
+                                </div>
+                                <h4>Vehicals</h4>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6">
+                            <div class="service-item">
+                                <div class="icon">
+                                    <a href="#C_A" ><ic   class="fa  fa-female" data-toggle="modal" data-target=".bs-example-modal-lg"></ic></a>
+                                 </div>
+                                 <h4>Faishen and beauty</h4>
+                             </div>
+                        </div>
+
+                        
+                        
+                    </div>
+
+                    <!-- /////////////////////////////////////// -->
+
+
+
+
+
+
+                    <!--<div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/car.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Summer Sandwich</a></h4>
+                                        <span>29 Sep 2084</span>
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/blogpost2.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">New Great Taste</a></h4>
+                                        <span>23 Sep 2084</span>
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/blogpost3.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Spicy Pizza</a></h4>
+                                        <span>14 Sep 2084</span>
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/blogpost4.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Healthy Food</a></h4>
+                                        <span>25 Aug 2084</span>
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/blogpost5.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Great Breakfast</a></h4>
+                                        <span>17 Aug 2084</span>
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="blog-post">
+                                <div class="blog-thumb">
+                                    <img src="images/blogpost6.jpg" alt="" />
+                                </div>
+                                <div class="blog-content">
+                                    <div class="content-show">
+                                        <h4><a href="single-post.html">Fresh Fruit Juice</a></h4>
+                                        <span>12 Aug 2084</span>
+                                    </div>
+                                    <div class="content-hide">
+                                        <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit. Sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+
+
+            <div id="testimonails">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="heading-section">
+                                <h2>What Customers Say</h2>
+                                <img src="images/under-heading.png" alt="" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="testimonails-slider">
+                              <ul class="slides">
+                                <li>
+                                    <div class="testimonails-content">
+                                        <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin.</p>
+                                        <h6>Jennifer - <a href="#">Chief Designer</a></h6>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="testimonails-content">
+                                        <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin.</p>
+                                        <h6>Laureen - <a href="#">Marketing Executive</a></h6>
+                                    </div> 
+                                </li>
+                                <li>
+                                    <div class="testimonails-content">
+                                        <p>Sed egestas tincidunt mollis. Suspendisse rhoncus vitae enim et faucibus. Ut dignissim nec arcu nec hendrerit sed arcu odio, sagittis vel diam in, malesuada malesuada risus. Aenean a sem leo. Nam ultricies dolor et mi tempor, non pulvinar felis sollicitudin.</p>
+                                        <h6>Tanya - <a href="#">Creative Director</a></h6>
+                                    </div>
+                                </li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+
+        <script src="Scripts/jquery-1.11.0.min.js"></script>
+        <script src="Scripts/jquery.gmap3.min.js"></script>
+        <script src="Scripts/plugins.js"></script>
+        <script src="Scripts/main.js"></script>
+
+    </body>
+</html>

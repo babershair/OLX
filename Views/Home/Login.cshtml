@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+<div class="container">
+ <div class="row">
+<div class="col-md-8">
+
+    <form action="/Home/LoginCheck" method="post" class="send-message">
+        <div class="row">
+            <span><h2>@ViewBag.x</h2></span>
+        <div class="name col-md-4">
+            <input type="text" name="UserName" id="UserName" placeholder="User Name" required="required" style="color:orange"/>
+        </div>
+        </div>
+        <div class="row">
+              <div class="password col-md-4">
+            <input type="password" name="Passward" id="Passward" placeholder="Passward" required="required" style="color:black"/>
+        </div>
+        
+          </div>                           
+        <div class="send">
+            
+             <input type ="submit" value ="Login" class="btn btn-info" style =" font-size: medium; height:60px;width:250px" /> 
+        </div>
+    </form>
+    </div>
+     </div>
+
+</div>
